@@ -10,3 +10,5 @@ app.get('/', (req, res) => {
 app.listen(62000, () => {
     console.log('Server running on port 62000');
 })
+
+app.use(express.static(path.join( __dirname+ '/public')));
