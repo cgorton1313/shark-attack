@@ -1,0 +1,39 @@
+.header-bar{
+    background-color: #2B3A67;
+}
+.header-question-text{
+    color: #FFC482;
+    padding-top: 15%;
+    padding-left:45%;
+    padding-bottom:15%;
+}
+#rotating-banner{
+    background-color: #496A81;
+}
+.head-font{
+}
+#links-row{
+    margin-top:20px;
+}
+.cards{
+    width:28%;
+    padding: 2%;
+}
+#column1{
+    width:10%;
+}
+#column2{
+    width:10%;
+}
+#links-divs{
+    width:85%;
+}
+.menu-card-head-text{
+    color:#2B3A67;
+}
+#about-head-text{
+    color:#B3AF8F;
+}
+.main-footer{
+    background-color:#66999B;
+}
