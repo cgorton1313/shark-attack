@@ -35,5 +35,16 @@
     color:#B3AF8F;
 }
 .main-footer{
+    padding-top:6%;
     background-color:#66999B;
+    padding-bottom:8%;
+}
+.footer-text-one{
+    margin:1%;
+}
+#about-text{
+    margin-bottom: 4%;
+}
+.footer-column-filler-text{
+    color:#66999B;
 }
