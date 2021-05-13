@@ -12,7 +12,15 @@
             <p>insert logo once designed</p>
         </button>
     </header>
-
+    
+    <div class="dropdown w3-right">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div> 
     <!-- rotating banner - figure out that too -->
     <div id="rotating-banner">
         <!-- image(s) here -->
@@ -42,11 +50,43 @@
 
     <!--About section-->
     <h1 class="w3-center" id="about-head-text"><b>About</b></h1>
-    <p class="w3-center w3-margin w3-padding">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <p id="about-text" class="w3-center w3-margin-top w3-margin-left w3-margin-right w3-padding">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
     <!--Footer-->
-    <footer class="main-footer">
-        
+    <footer class="main-footer w3-container w3-cell-row">
+        <div class="w3-quarter">
+            <p class="footer-column-filler-text">s</p>
+            <!--insert logo shark dad man in here-->
+        </div>
+        <div class="w3-quarter">
+            <p class="footer-text-one">Lorem ipsum dolor sit amet<br><br>consetetur sadipscing</p>
+        </div>
+        <div class="w3-quarter">
+            <p class="w3-right-align footer-text-one">Lorem ipsum dolor sit amet<br><br>consetetur sadipscing</p>
+        </div>
+        <div class="w3-quarter">
+            <p class="footer-column-filler-text">s</p>
+        </div>
     </footer>
+
+    <script>
+
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
 </body>
 </html>

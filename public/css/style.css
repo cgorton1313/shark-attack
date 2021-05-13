@@ -10,8 +10,10 @@
 #rotating-banner{
     background-color: #496A81;
 }
-.head-font{
-}
+
+/* .head-font{
+} */
+
 #links-row{
     margin-top:20px;
 }
@@ -35,5 +37,57 @@
     color:#B3AF8F;
 }
 .main-footer{
-    background-color:#66999B;
+    padding-top:6%;
+    background-color:#66999B; 
+    padding-bottom:8%;
 }
+.footer-text-one{
+    margin:1%;
+}
+#about-text{
+    margin-bottom: 4%;
+}
+.footer-column-filler-text{
+    color:#66999B;
+}
+  
+
+  /* dropdown */
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
