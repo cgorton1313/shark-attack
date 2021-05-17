@@ -97,3 +97,7 @@
   .dropdown a:hover {background-color: #ddd;}
   
   .show {display: block;}
+  
+  #question-large{
+      padding: 40px;
+  }
