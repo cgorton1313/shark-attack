@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="table-testing/pie-chart.js"></script>
     <title>Shark Attacks: What Is a Shark Attack?</title>
 </head>
 
@@ -15,8 +17,9 @@
             </button>
         </div>
         <div class="dropdown w3-row-item w3-quarter w3-right">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <button onclick="myFunction()" class="dropbtn">Menu</button>
             <div id="myDropdown" class="dropdown-content">
+              <a href="/index.html">Home</a>
               <a href="#shark-types">Shark Types</a>
               <a href="#map">Map</a>
               <a href="#data">Data</a>
@@ -28,6 +31,16 @@
     <!--Question and text-->
     <h1 class="w3-center question-large">What is a shark attack?</h1>
 
+    <!--pi chart-->
+    <div class="w3-row">
+        <div class="w3-third">
+            <div id="chart_div">
+            </div>
+        </div>
+        <div class="w3-twothird">
+            <!--answer this question-->
+        </div>
+    </div>
     <!--Footer-->
     <footer class="main-footer w3-container w3-cell-row">
         <div class="w3-quarter">
