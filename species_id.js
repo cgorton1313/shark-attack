@@ -8,4 +8,18 @@ const connection = new Mysql({
 })
 
 let species = connection.query('SELECT * from species')
-console.log(species)
+let attacks = connection.query('SELECT * from attacks')
+
+
+for (let i = 0; i < attacks.length; i++) {
+    //console.log(attacks[i].attack_id, attacks[i].species);  
+    let match = 'none'; 
+    let attackSpecies = attacks[i].species.toLowerCase();
+    for (let j = 0; j < species.length; j++) {
+       if (attackSpecies.includes(species[j].common_name)) {
+            match = species[j].common_name;
+        }  
+    }
+    console.log(attacks[i].attack_id + ' ' + attackSpecies +' Attack species was ' + match);
+}
+
