@@ -1,5 +1,5 @@
 const config = require('./config.js');
-// const mysql = require('mysql');
+const mysql = require('mysql');
 const util = require('util');
 
 async function getAttacks() {
@@ -10,7 +10,7 @@ async function getAttacks() {
 }
 
 async function getQueryData(sql) {
-    let connection = nysql.creatConnection({
+    let connection = mysql.createConnection({
         host: '68.66.216.18',
         user: 'penguin_sharkattack',
         password: 'aph_sharkattack!',
