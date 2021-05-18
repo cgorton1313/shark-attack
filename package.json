@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cgortonpenguinhall/sharkattack#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sync-mysql": "^3.0.1"
   }
 }
