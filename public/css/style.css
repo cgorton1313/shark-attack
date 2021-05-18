@@ -97,3 +97,17 @@
   .dropdown a:hover {background-color: #ddd;}
   
   .show {display: block;}
+  
+  .question-large{
+      padding: 40px;
+  }
+  #what-is-shark-body{
+      margin-left:10%;
+      padding-left:40px;
+      margin-right:10%;
+      padding-right:5%;
+      padding-top:5%;
+      margin-bottom:8%;
+      padding-bottom:4%;
+      background-color:#B3AF8F;
+  }
