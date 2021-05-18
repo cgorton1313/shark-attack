@@ -1,4 +1,5 @@
 const config = require(__dirname + '/config.js');
+const sharkAttackData = require(__dirname + '/sharkAttackData.js')
 const express = require('express');
 const path = require('path');
 
@@ -8,14 +9,8 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
   })
 
-app.get('/attacks', (req, res) => {
-  res.json([
-    ['Great White', 6],
-    ['Hammerhead', 3],
-    ['Whale Shark', 4],
-    ['Basking', 2],
-    ['Tiger Shark', 5]
-  ])
+app.get('/attacks', async function sharkAttackReturn (req, res) {
+  res.json(await sharkAttackData.getAttacks());
 })
 
 
