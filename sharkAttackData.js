@@ -12,7 +12,7 @@ async function getAttacks() {
 async function getQueryData(sql) {
     let connection = mysql.createConnection({
         host: '68.66.216.18',
-        user: 'penguin_sharkattack',
+        user: 'penguinh_sharkattack',
         password: 'aph_sharkattack!',
         database: 'penguinh_sharkattack'
     });
