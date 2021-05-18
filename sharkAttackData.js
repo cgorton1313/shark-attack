@@ -1,8 +1,8 @@
 const config = require('./config.js');
-const mysql = require('mysql');
+// const mysql = require('mysql');
 const util = require('util');
 
-async function sharkAttackReturn() {
+async function getAttacks() {
     let sql = 'select * from attacks';
     let result = await getQueryData(sql);
     console.log(result)
@@ -39,5 +39,5 @@ async function getQueryData(sql) {
 }
 
 module.exports = {
-    sharkAttackReturn
+    getAttacks
 }
