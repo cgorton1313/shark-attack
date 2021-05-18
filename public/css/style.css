@@ -29,8 +29,13 @@
 #links-divs{
     width:85%;
 }
-.menu-card-head-text{
+.menu-card-head-text-1{
     color:#2B3A67;
+}
+.menu-card-head-text-2{
+    color:#2B3A67;
+    padding-top:18px;
+    padding-bottom:18px;
 }
 #about-head-text{
     color:#B3AF8F;
@@ -38,13 +43,20 @@
 .main-footer{
     padding-top:6%;
     background-color:#66999B; 
-    padding-bottom:8%;
+    padding-bottom:4%;
 }
 .footer-text-one{
     margin:1%;
 }
+.footer-text-two{
+    margin:1%;
+    padding-bottom:14px;
+}
+.footer-left-text{
+    padding-left:13%;
+}
 #about-text{
-    margin-bottom: 4%;
+    margin-bottom: 3%;
 }
 .footer-column-filler-text{
     color:#66999B;
@@ -112,4 +124,8 @@
   }
   a:link {
     text-decoration: none;
+  }
+  .footer-mascot{
+      width:200px;
+      position:fixed;
   }
