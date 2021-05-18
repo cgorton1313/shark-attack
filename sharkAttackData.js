@@ -39,5 +39,5 @@ async function getQueryData(sql) {
 }
 
 module.exports = {
-    getSighting
+    sharkAttackReturn
 }
