@@ -2,7 +2,7 @@ const config = require('./config.js');
 const mysql = require('mysql');
 const util = require('util');
 
-async function functionName() {
+async function sharkAttackReturn() {
     let sql = 'select * from attacks';
     let result = await getQueryData(sql);
     console.log(result)
