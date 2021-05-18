@@ -30,6 +30,7 @@ function drawChart() {
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    console.log(chart);
     chart.draw(data, options);
 
     
