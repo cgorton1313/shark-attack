@@ -1,5 +1,5 @@
 const config = require('./config.js');
-// const mysql = require('mysql');
+const mysql = require('mysql');
 const util = require('util');
 
 async function getAttacks() {
