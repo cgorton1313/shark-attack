@@ -1,6 +1,7 @@
 const config = require('./config.js');
 const mysql = require('mysql');
 const util = require('util');
+// test
 
 async function getAttacks() {
     let sql = 'select * from attacks';
