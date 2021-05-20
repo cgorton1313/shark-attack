@@ -9,7 +9,7 @@ async function getAttacks() {
 }
 
 async function getCountryTotalAttacks() {
-    let sql = 'SELECT COUNT attacks from attacks group by country';
+    let sql = 'SELECT COUNT(attack_id) from attacks group by country';
     let result = await getQueryData(sql);
     return result;
 }
