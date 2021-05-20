@@ -11,11 +11,11 @@ async function getAttacks() {
 
 async function getQueryData(sql) {
     let connection = mysql.createConnection({
-        host: '68.66.216.18',
-        user: 'penguinh_sharkattack',
-        password: 'aph_sharkattack!',
-        database: 'penguinh_sharkattack'
-    });
+        host: config.db.host,
+        user: config.db.user,
+        password: config.db.password,
+        database: config.db.database
+        });
 
     connection.connect(function (err) {
         if (err) {
