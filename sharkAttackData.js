@@ -5,7 +5,12 @@ const util = require('util');
 async function getAttacks() {
     let sql = 'select * from attacks';
     let result = await getQueryData(sql);
-    console.log(result)
+    return result;
+}
+
+async function getCountryTotalAttacks() {
+    let sql = 'SELECT COUNT(attack_id) from attacks group by country';
+    let result = await getQueryData(sql);
     return result;
 }
 
@@ -39,5 +44,5 @@ async function getQueryData(sql) {
 }
 
 module.exports = {
-    getAttacks
+    getAttacks, getCountryTotalAttacks
 }

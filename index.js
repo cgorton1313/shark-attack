@@ -9,8 +9,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/index.html'));
   })
 
-app.get('/attacks', async function sharkAttackReturn (req, res) {
+app.get('/attacks', async function (req, res) {
   res.json(await sharkAttackData.getAttacks());
+})
+
+app.get('/countryTotal', async function (req, res) {
+  res.json(await sharkAttackData.getCountryTotalAttacks());
 })
 
 
