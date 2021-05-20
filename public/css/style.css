@@ -129,3 +129,14 @@
       width:200px;
       position:fixed;
   }
+.hide-shark-button{
+    background-color:#66999B;
+    margin-top: 42px;
+    margin-left: 90%;
+
+}
+.dropbtn{
+    margin-top:10%;
+    padding-left: 30px;
+    padding-right:30px;
+}
