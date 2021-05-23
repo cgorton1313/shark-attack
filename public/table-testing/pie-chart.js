@@ -23,15 +23,13 @@ function drawChart() {
 
     // Set chart options
     var options = {
-        'title': 'Attacks by Various Sharks',
-        'width': 500,
-        'height': 400
+        title: 'Attacks by Various Sharks',
+        width: 500,
+        height: 400
     };
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     console.log(chart);
     chart.draw(data, options);
-
-    
 }
