@@ -9,6 +9,8 @@ async function getAttacks() {
 }
 
 async function getCountryTotalAttacks() {
+    // TODO:    change SQL statement so that it returns the country fro each group, and also creates an alias 
+    //          of 'numAttacks' to replace 'COUNT(attack_id)'
     let sql = 'SELECT COUNT(attack_id) from attacks group by country';
     let result = await getQueryData(sql);
     return result;
