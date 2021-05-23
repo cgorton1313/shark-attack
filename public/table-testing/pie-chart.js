@@ -13,6 +13,10 @@ function drawChart() {
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Shark Type');
     data.addColumn('number', 'Attacks');
+    // TODO:    change out this mock data with real data that you get by querying the database (manually)
+    //          so, use phpmyadmin or run SQL right from VS Code to find out how many fatalites were 'Y' and
+    //          how many were 'N'. disregard any other values. then use that data below, instead of the fake stuff
+    //          you see here
     data.addRows([
         ['Great White', 6],
         ['Hammerhead', 3],
