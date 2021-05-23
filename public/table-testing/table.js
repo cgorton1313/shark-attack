@@ -1,15 +1,22 @@
   google.charts.load('current', {'packages':['table']});
   google.charts.setOnLoadCallback(drawTable);
 
+  // TODO: make this an async function
   function drawTable() {
-    var data = new google.visualization.DataTable();
+    // TODO:  fetch the real data from the server and convert it into json,
+    //        then create a new array of arrays using the real data, with just the
+    //        columns you want in the table
+
+    let data = new google.visualization.DataTable();
+    // TODO: get correct data types. for now, you can just use strings
     data.addColumn('string', 'Species');
-    data.addColumn('number', 'Year');
+    data.addColumn('string', 'Year');
     data.addColumn('string', 'Country');
     data.addColumn('string', 'Area');
-    data.addColumn('boolean', 'Provoked');
+    data.addColumn('string', 'Provoked');
     data.addColumn('string', 'Injury');
-    data.addColumn('boolean', 'Fatal');
+    data.addColumn('string', 'Fatal');
+    // TODO: replace this fake array of arrays with the real array of arrays
     data.addRows([
       ['Lemon Shark', {v: 2020, f: '2020'}, 'Australia', 'Queensland', false, 'Lacerations to leg', false],
       ['White Shark', {v: 2019, f: '2019'}, 'U.S.A', 'Rhode Island', false, 'FATAL', true],
