@@ -18,14 +18,14 @@ function drawChart() {
     //          how many were 'N'. disregard any other values. then use that data below, instead of the fake stuff
     //          you see here
     data.addRows([
-        ['Y', 1401],
-        ['N', 4439],
+        ['Fatal', 1401],
+        ['Not Fatal', 4439],
         ['Unknown', 71],
     ]);
 
     // Set chart options
     var options = {
-        title: 'Attacks by Various Sharks',
+        title: 'Fatalities of Shark Attacks',
         width: 500,
         height: 400
     };
