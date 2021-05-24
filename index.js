@@ -17,6 +17,10 @@ app.get('/countryTotal', async function (req, res) {
   res.json(await sharkAttackData.getCountryTotalAttacks());
 })
 
+app.get('/numberOfFatalities', async function (req, res) {
+  res.json(await sharkAttackData.numFatalities());
+})
+
 
 app.listen(config.app.port, () => {
     console.log('Server running on port ' + config.app.port);
