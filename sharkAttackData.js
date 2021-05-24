@@ -8,10 +8,10 @@ async function getAttacks() {
     return result;
 }
 
-async function getCountryTotalAttacks() {
+async function numAttacks() {
     // TODO:    change SQL statement so that it returns the country fro each group, and also creates an alias 
     //          of 'numAttacks' to replace 'COUNT(attack_id)'
-    let sql = 'SELECT COUNT(attack_id) from attacks group by country';
+    let sql = 'SELECT country, COUNT(attack_id) from attacks group by country';
     let result = await getQueryData(sql);
     return result;
 }
@@ -46,5 +46,5 @@ async function getQueryData(sql) {
 }
 
 module.exports = {
-    getAttacks, getCountryTotalAttacks
+    getAttacks, numAttacks
 }
