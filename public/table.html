@@ -3,51 +3,44 @@
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="js/pie-chart.js"></script>
-    <title>Shark Attacks: What Is a Shark Attack?</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/table.js"></script>
+    <title>Shark Attacks: Data Table</title>
 </head>
 
 <body>
-    <!-- top bar -->
+    <!-- top bar - dropdown not yet inserted -->
     <div class="w3-cell-row header-bar">
-        <div class="w3-row-item w3-threequarter">
+        <div class="w3-row-item w3-half">
           <button class = "w3-bar-item w3-button">
             <p><a href="index.html"><img src="img/sharkicon.jpg" alt="shark icon" width="50"  height="50"></a>
             </p>
           </button>
         </div>
+        <div class="w3-quarter w3-row-item">
+          <!-- hide button -->
+          <button id="hide-button" class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="hideShark()">Hide Sherman the Shark</button>
+        </div>
         <div class="dropdown w3-row-item w3-quarter w3-right">
-            <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <button onclick="dropdownMenu()" class="dropbtn">Menu</button>
             <div id="myDropdown" class="dropdown-content">
               <a href="index.html">Home</a>
               <a href="#shark-types">Shark Types</a>
-              <a href="#map">Map</a>
-              <a href="#data">Data</a>
+              <a href="/map.html">Map</a>
               <a href="#quiz">Quiz</a>
             </div>
           </div>
     </div>
-
+    
     <!--Question and text-->
-    <h1 class="w3-center question-large">What is a shark attack?</h1>
+    <h1 class="w3-center question-large">Shark Attack Data</h1>
 
-    <!--pi chart-->
-    <div class="w3-row">
-        <div class="w3-third">
-            <div id="chart_div">
-            </div>
-        </div>
-        <div class="w3-twothird">
-          <p class="what-is-shark-body">A shark attack is officially described as any attack on a human by a shark, but what does that really mean?
-            <br><br>Does it mean injuries? Deaths? Aggressive conversations?? Shark attacks install a certain amount of fear in people, despite their rarity, because of horror movies like <i>Jaws</i> or <i>50 Meters Down</i>.
-            <br>In reality, <b>Only 1 in 6 shark attacks are fatal.</b>
-            <br><br>Sharks are more likely to bite a small section of the body such as an ankle, wrist, arm, or leg than anything fatal. Once the shark discovers it's a human, the shark sometimes stops and swims away. Usually these injuries are minor and usually they are accidental. To a shark, a surfer, swimmer, or kayak, looks very similar to a seal or fish. </p>
-        </div>
-    </div>
+    <!--data table-->
+  
+    <div id="table_div" ></div>
 
     <!--shark man!-->
-    <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
+    <img id="shark-man" class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
 
     <!--Footer-->
     <footer class="main-footer w3-container w3-cell-row">
@@ -63,8 +56,8 @@
   </footer>
 
     <script>
-
-        function myFunction() {
+      let toggle = "shown";
+        function dropdownMenu() {
           document.getElementById("myDropdown").classList.toggle("show");
         }
         
@@ -78,6 +71,19 @@
                 openDropdown.classList.remove('show');
               }
             }
+          }
+        }
+
+        function hideShark(){
+          if (toggle == "shown"){
+            document.getElementById("shark-man").setAttribute('class', 'w3-display-bottomleft footer-mascot w3-hide');
+            document.getElementById("hide-button").innerHTML = "Show Sherman the Shark";
+            toggle = "hidden"; 
+          }
+          if (toggle == "hidden"){
+            document.getElementById("shark-man").setAttribute('class', 'w3-display-bottomleft footer-mascot');
+            document.getElementById("hide-button").innerHTML = "Hide Sherman the Shark";
+            toggle = "shown"; 
           }
         }
         </script>
