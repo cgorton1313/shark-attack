@@ -18,11 +18,9 @@ function drawChart() {
     //          how many were 'N'. disregard any other values. then use that data below, instead of the fake stuff
     //          you see here
     data.addRows([
-        ['Great White', 6],
-        ['Hammerhead', 3],
-        ['Whale Shark', 4],
-        ['Basking', 2],
-        ['Tiger Shark', 5]
+        ['Y', 1401],
+        ['N', 4439],
+        ['Unknown', 71],
     ]);
 
     // Set chart options
