@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Shark Attacks: Home</title>
     <style>
-        .rotating-banner {display:none;}
+        .rotating-banner {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
     <!-- top bar - dropdown not yet inserted -->
     <div class="w3-cell-row header-bar">
         <div class="w3-row-item w3-half">
-            <button class = "w3-bar-item w3-button">
-                <p><img src="img/sharkicon.jpg" alt="shark icon" width="100"  height="100" class = "w3-hover-none">
+            <button class="w3-bar-item w3-button w3-hover-none">
+                <p><img src="img/sharkicon.jpg" alt="shark icon" width="100" height="100" class="w3-hover-none">
                 </p>
             </button>
         </div>
         <div class="w3-quarter w3-row-item">
-            <!-- hide button -->
-            <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="hideShark()">Hide Sherman the Shark</button>
+        <!-- hide button -->
+            <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Hide Sherman the
+                Shark</button>
         </div>
         <div class="dropdown w3-row-item w3-quarter w3-right">
             <button onclick="dropdownMenu()" class="dropbtn">Menu</button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="#shark-types">Shark Types</a>
-              <a href="#map">Map</a>
-              <a href="#data">Data</a>
-              <a href="#quiz">Quiz</a>
+                <a href="#shark-types">Shark Types</a>
+                <a href="#map">Map</a>
+                <a href="#data">Data</a>
+                <a href="#quiz">Quiz</a>
             </div>
-          </div>
+        </div>
     </div>
 
     <!--shark man!-->
@@ -37,24 +42,36 @@
 
     <!-- rotating banner -->
     <div class="rotating-banner">
-        <a href="question-what-is.html"><div style="background-image: url('img/shark-banner-one.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;" class="w3-container">
-            <h1 class="header-question-text w3-center w3-hover-text-orange">What is a shark attack?</h1>
-        </div></a>
+        <a href="question-what-is.html">
+            <div style="background-image: url('img/shark-banner-one.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"
+                class="w3-container">
+                <h1 class="header-question-text w3-center w3-hover-text-orange">What is a shark attack?</h1>
+            </div>
+        </a>
     </div>
     <div class="rotating-banner">
-        <a href="question-dangerous-types.html"><div style="background-image: url('img/shark-banner-two.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;" class="w3-container">
-            <h1 class="header-question-text w3-center w3-hover-text-orange">What types of sharks are dangerous?</h1>
-        </div></a>
+        <a href="question-dangerous-types.html">
+            <div style="background-image: url('img/shark-banner-two.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"
+                class="w3-container">
+                <h1 class="header-question-text w3-center w3-hover-text-orange">What types of sharks are dangerous?</h1>
+            </div>
+        </a>
     </div>
     <div class="rotating-banner">
-        <a href="question-why-attacks-happen.html"><div style="background-image: url('img/shark-banner-three.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;" class="w3-container">
-            <h1 class="header-question-text w3-center w3-hover-text-orange">Why do shark attacks happen?</h1>
-        </div></a>
+        <a href="question-why-attacks-happen.html">
+            <div style="background-image: url('img/shark-banner-three.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"
+                class="w3-container">
+                <h1 class="header-question-text w3-center w3-hover-text-orange">Why do shark attacks happen?</h1>
+            </div>
+        </a>
     </div>
     <div class="rotating-banner">
-        <a href="question-sharks-like-dogs.html"><div style="background-image: url('img/shark-banner-four.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;" class="w3-container">
-            <h1 class="header-question-text w3-center w3-hover-text-orange">How are sharks like dogs?</h1>
-        </div></a>
+        <a href="question-sharks-like-dogs.html">
+            <div style="background-image: url('img/shark-banner-four.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"
+                class="w3-container">
+                <h1 class="header-question-text w3-center w3-hover-text-orange">How are sharks like dogs?</h1>
+            </div>
+        </a>
     </div>
 
     <!-- menu cards -->
@@ -63,15 +80,18 @@
         </div>
         <div id="links-divs" class="w3-col w3-row">
             <div class="w3-third w3-card w3-margin cards">
-                <h3 class="w3-center menu-card-head-text-1 w3-hover-text-light-blue head-font"><strong>Shark Attacks Around the World</strong></h3>
+                <h3 class="w3-center menu-card-head-text-1 w3-hover-text-light-blue head-font"><strong>Shark Attacks
+                        Around the World</strong></h3>
                 <!--insert globe icon-->
             </div>
             <div class="w3-third w3-card w3-margin cards">
-                <h3 class="head-font menu-card-head-text-2 w3-hover-text-light-blue w3-center"><strong>Shark Attack Data</strong></h3>
+                <h3 class="head-font menu-card-head-text-2 w3-hover-text-light-blue w3-center"><strong>Shark Attack
+                        Data</strong></h3>
                 <!--insert number icon-->
             </div>
             <div class="w3-third w3-card w3-margin cards">
-                <h3 class="w3-center menu-card-head-text-2 w3-hover-text-light-blue head-font"><strong>Types of Sharks</strong></h3>
+                <h3 class="w3-center menu-card-head-text-2 w3-hover-text-light-blue head-font"><strong>Types of
+                        Sharks</strong></h3>
                 <!--insert icon-->
             </div>
         </div>`
@@ -80,58 +100,92 @@
 
     <!--About section-->
     <h1 class="w3-center" id="about-head-text"><b>About</b></h1>
-    <p id="about-text" class="w3-center w3-margin-top w3-margin-left w3-margin-right w3-padding">Thank you for visiting the Shark Attack File! Our goal is to educate generations on sharks and why they aren’t as scary as you think. You can explore different species, their scientific name, what they look like, and look at their shark attack statistics in your area and around the world! Are you afraid of seeing Great Whites at the coast of North Carolina? Check out our map and look to see any shark attacks! Not only this but our website will be able to tell you if the shark attack was provoked or not, meaning if it was the sharks fault or the human poked at the shark. Should you go surfing on Plum Island? You can check this out too! Go to our website to see possible threats and data! We believe as a world we should stop categorizing sharks as scary monsters, and start to look at the real data and see that shark attacks in your area are less likely than you think.</p>
+    <p id="about-text" class="w3-center w3-margin-top w3-margin-left w3-margin-right w3-padding">Thank you for visiting
+        the Shark Attack File! Our goal is to educate generations on sharks and why they aren’t as scary as you think.
+        You can explore different species, their scientific name, what they look like, and look at their shark attack
+        statistics in your area and around the world! Are you afraid of seeing Great Whites at the coast of North
+        Carolina? Check out our map and look to see any shark attacks! Not only this but our website will be able to
+        tell you if the shark attack was provoked or not, meaning if it was the sharks fault or the human poked at the
+        shark. Should you go surfing on Plum Island? You can check this out too! Go to our website to see possible
+        threats and data! We believe as a world we should stop categorizing sharks as scary monsters, and start to look
+        at the real data and see that shark attacks in your area are less likely than you think.</p>
 
     <!--Footer-->
     <footer class="main-footer w3-container w3-cell-row">
         <div class="w3-half footer-left-text">
-            <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and Further Information<br><br>&copy May 2021</p>
+            <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin
+                Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and
+                Further Information<br><br>&copy May 2021</p>
         </div>
         <div class="w3-half">
-            <a href="question-what-is.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">What is a shark attack?</p></a>
-            <a href="question-why-attacks-happen.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">Why do shark attacks happen?</p></a>
-            <a href="question-dangerous-types.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">What types of sharks are dangerous?</p></a>
-            <a href="question-sharks-like-dogs.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">How are sharks like dogs?</p></a>
+            <a href="question-what-is.html">
+                <p class="w3-hover-text-light-blue w3-right-align footer-text-two">What is a shark attack?</p>
+            </a>
+            <a href="question-why-attacks-happen.html">
+                <p class="w3-hover-text-light-blue w3-right-align footer-text-two">Why do shark attacks happen?</p>
+            </a>
+            <a href="question-dangerous-types.html">
+                <p class="w3-hover-text-light-blue w3-right-align footer-text-two">What types of sharks are dangerous?
+                </p>
+            </a>
+            <a href="question-sharks-like-dogs.html">
+                <p class="w3-hover-text-light-blue w3-right-align footer-text-two">How are sharks like dogs?</p>
+            </a>
         </div>
     </footer>
 
 
     <script>
+        let sharkIsShowing = true;
+        function sharkButtonClicked(){
+            if (sharkIsShowing == true){
+                hideShark();
+                sharkIsShowing = false;
+            } else {
+                showShark();
+                sharkIsShowing = true;
+            }
+        }
 
         function dropdownMenu() {
-          document.getElementById("myDropdown").classList.toggle("show");
+            document.getElementById("myDropdown").classList.toggle("show");
         }
-        
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
             }
-          }
         }
         var slideIndex = 0;
         carousel();
 
         function carousel() {
-        var i;
-        var x = document.getElementsByClassName("rotating-banner");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none"; 
-        }
-        slideIndex++;
-        if (slideIndex > x.length) {slideIndex = 1} 
-        x[slideIndex-1].style.display = "block"; 
-        setTimeout(carousel, 3000); 
+            var i;
+            var x = document.getElementsByClassName("rotating-banner");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
         }
 
-        function hideShark(){
+        function hideShark() {
             document.getElementById("shark-man").setAttribute('class', 'w3-hide');
         }
-        </script>
+
+        function showShark(){
+            document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
+        }
+    </script>
 </body>
+
 </html>
