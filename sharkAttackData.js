@@ -59,8 +59,9 @@ and fatal = 'Y'
 group by common_name) as fatalCount
 on attackCount.common_name = fatalCount.common_name
 order by percentFatal desc;
-
 `
+let result = await getQueryData(sql);
+return result;
 }
 
 module.exports = {
