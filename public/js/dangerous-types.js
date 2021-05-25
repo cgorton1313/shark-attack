@@ -23,7 +23,8 @@ function drawChart() {
             ['Tiger Shark', 269],
             ['White Shark', 642],
             ['Whitetip Shark', 27],
-            ['Bull Shark', 182]
+            ['Bull Shark', 182],
+            ['Other', 607],
     ]);
 
     // Set chart options
