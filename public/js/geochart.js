@@ -1,8 +1,6 @@
 google.charts.load('current', { 'packages': ['geochart'] });
 google.charts.setOnLoadCallback(drawRegionsMap);
 
-// TODO: make this an async function
-
 async function drawRegionsMap() {
   let countryData = await fetch('/countryTotal');
   countryData = await countryData.json();
