@@ -18,12 +18,13 @@ function drawChart() {
     //          how many were 'N'. disregard any other values. then use that data below, instead of the fake stuff
     //          you see here
     data.addRows([
-            ['Carcharhinid Shark', 1],
-            ['Basking Shark', 7],
-            ['Tiger Shark', 269],
             ['White Shark', 642],
-            ['Whitetip Shark', 27],
-            ['Bull Shark', 182]
+            ['Tiger shark', 269],
+            ['Bull Shark', 182],
+            ['Nurse Shark', 103],
+            ['Reef Shark', 72],
+            ['Whaler Shark', 66],
+            ['Other', 401],
     ]);
 
     // Set chart options
