@@ -23,7 +23,16 @@
     data.addColumn('string', 'Fatal');
     data.addRows(tableArray);
 
-    var table = new google.visualization.Table(document.getElementById('table_div'));
+    var options
+    var options = {
+      showRowNumber: true,
+      width: '100%',
+      height: '50%',
+      page: 'enable',
+      pageSize: 100,
+      pagingButtons: 'auto'
+  };
 
-    table.draw(data, {showRowNumber: true, width: '100%', height: '50%'});
+    var table = new google.visualization.Table(document.getElementById('table_div'));
+    table.draw(data, options);
   }

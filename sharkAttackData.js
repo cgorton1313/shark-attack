@@ -43,7 +43,7 @@ async function getQueryData(sql) {
     return result;
 }
 
-async function numFatalities(sql) {
+async function numFatalities() {
     let sql = `
 select attackCount.common_name, numFatals, numAttacks, (numFatals / numAttacks) as percentFatal
 from (
