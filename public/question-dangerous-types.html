@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="js/dangerous-types.js"></script>
-    <title>Shark Attacks: What Types of Sharks are Dangerous?</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="js/dangerous-types.js"></script>
+  <title>Shark Attacks: What Types of Sharks are Dangerous?</title>
 </head>
 
 <body>
@@ -28,44 +29,63 @@
             </div>
           </div>
     </div>
+    <div class="dropdown w3-row-item w3-quarter w3-right">
+      <button onclick="myFunction()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="#shark-types">Shark Types</a>
+        <a href="#map">Map</a>
+        <a href="#data">Data</a>
+        <a href="#quiz">Quiz</a>
+      </div>
+    </div>
+  </div>
 
-    <!--shark man!-->
-    <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
+  <!--shark man!-->
+  <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
 
-    <!--Question and text-->
-    <h1 class="w3-center question-large">What types of sharks are dangerous?</h1>
+  <!--Question and text-->
+  <h1 class="w3-center question-large">What types of sharks are dangerous?</h1>
 
-    <!--pi chart-->
-    <div class="w3-row">
-        <div class="w3-third" id = 'chart_div'></div>
-        </div>
-        <div class="w3-center">
-          <p class="what-is-shark-body"> With the statistics below, we now know which sharks to potentially avoid. We know Great White Sharks cause a lot of attacks on humans, but also that only 25% of those attacks are fatal. Although attacks are common, most of them are most likely provoked or accidental. </p>
-          <!--answer this question-->
-        </div>
+  <!--pi chart-->
+  <div class="w3-row">
+    <div class="w3-third" id='chart_div'></div>
+  </div>
+  <div class="w3-center">
+    <p class="what-is-shark-body"> With the statistics below, we now know which sharks to potentially avoid. We know
+      Great White Sharks cause a lot of attacks on humans, but also that only 25% of those attacks are fatal. Although
+      attacks are common, most of them are most likely provoked or accidental. </p>
+    <!--answer this question-->
+  </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-third w3-card w3-margin cards">
+      <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong> "Great" White Shark</strong>
+      </h3>
+      <div class='w3-center'>
+        <img src="img/greatwhiteshark.jpg" width="100">
+      </div>
+      <p> 37% of attacks on humans are from Great White Sharks <br> 22% of Great White Shark attacks are fatal</p>
+      <!--insert number icon-->
+    </div>
+    <div class="w3-third w3-card w3-margin cards">
+      <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Tiger Shark</strong></h3>
+      <div class='w3-center'>
+        <img src="img/tigershark.jpg" width="100">
+      </div>
+      <p> 15% of attacks on humans are from Tiger Sharks <br> 26% of Tiger Shark attacks are fatal</p>
+
+      <!--insert number icon-->
     </div>
 
-    <div class="w3-row" style="margin-left: 15%; margin-right: 15%;">
-      <div class="w3-third w3-card w3-margin cards">
-        <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong> "Great" White Shark</strong></h3>
-        <img src="img/greatwhiteshark.jpg" width="100">
-        <p> 37% of attacks on humans are from Great White Sharks <br> 22% of Great White Shark attacks are fatal</p>
-        <!--insert number icon-->
-      </div>
-      <div class="w3-third w3-card w3-margin cards">
-        <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Tiger Shark</strong></h3>
-        <img src="img/tigershark.jpg" width="100">
-        <p> 15% of attacks on humans are from Tiger Sharks <br> 26% of Tiger Shark attacks are fatal</p>
-        
-        <!--insert number icon-->
-      </div>
-    
-      <div class="w3-third w3-card w3-margin cards">
-        <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Bull Shark</strong></h3>
+    <div class="w3-third w3-card w3-margin cards">
+      <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Bull Shark</strong></h3>
+      <div class='w3-center'>
         <img src="img/bullshark.jpg" width="100">
-        <p> 10% of attacks on humans are from Bull Sharks <br> 21% of Bull Shark attacks are fatal</p>
-        <!--insert number icon-->
       </div>
+      <p> 10% of attacks on humans are from Bull Sharks <br> 21% of Bull Shark attacks are fatal</p>
+      <!--insert number icon-->
     </div>
     <!--first row-->
     
@@ -73,67 +93,81 @@
       <div class="w3-third w3-card w3-margin cards">
         <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Nurse Shark</strong></h3>
         <img src="img/nurseshark.jpg" width="100">
-        <p> 5% of attacks on humans are from Nurse Sharks <br> 1% of Nurse Shark attacks are fatal</p>
-        <!--insert number icon-->
       </div>
-    
-      <div class="w3-third w3-card w3-margin cards">
-        <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Reef Shark</strong>
-        </h3>
-        <img src="img/carcharhinidshark.jpeg" width="100">
-        <p> 4% of attacks on humans are from Reef Sharks <br> 0% of Reef Sharks attacks are fatal</p>
-        <!--insert number icon-->
-      </div>
-    
-      <div class="w3-third w3-card w3-margin cards">
-        <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Whaler Shark</strong></h3>
-        <img src="img/whalershark.jpg" width="100">
-        <p> 3% of attacks on humans are from Whaler Sharks <br> 7% of Whaler Shark attacks are fatal</p>
-        <!--insert number icon-->
-      </div>
+      <p> 5% of attacks on humans are from Nurse Sharks <br> 1% of Nurse Shark attacks are fatal</p>
+      <!--insert number icon-->
     </div>
-    <!--second row-->
- 
 
-
-
-
-
-
-
-
-
-    
-    <!--Footer-->
-    <footer class="main-footer w3-container w3-cell-row">
-      <div class="w3-half footer-left-text">
-          <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and Further Information<br><br>&copy May 2021</p>
+    <div class="w3-third w3-card w3-margin cards">
+      <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Reef Shark</strong>
+      </h3>
+      <div class='w3-center'>
+        <img src="img/carcharhinidshark.jpeg" width="100">
       </div>
-      <div class="w3-half">
-          <a href="question-what-is.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">What is a shark attack?</p></a>
-          <a href="question-why-attacks-happen.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">Why do shark attacks happen?</p></a>
-          <a href="question-dangerous-types.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">What types of sharks are dangerous?</p></a>
+      <p> 4% of attacks on humans are from Reef Sharks <br> 0% of Reef Sharks attacks are fatal</p>
+      <!--insert number icon-->
+    </div>
+
+    <div class="w3-third w3-card w3-margin cards">
+      <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Whaler Shark</strong></h3>
+      <div class= 'w3-center'>
+      <img src="img/whalershark.jpg" width="100">
       </div>
+      <p> 3% of attacks on humans are from Whaler Sharks <br> 7% of Whaler Shark attacks are fatal</p>
+      <!--insert number icon-->
+    </div>
+  </div>
+  <!--second row-->
+
+
+
+
+
+
+
+
+
+
+
+  <!--Footer-->
+  <footer class="main-footer w3-container w3-cell-row">
+    <div class="w3-half footer-left-text">
+      <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin
+        Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and Further
+        Information<br><br>&copy May 2021</p>
+    </div>
+    <div class="w3-half">
+      <a href="question-what-is.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">What is a shark attack?</p>
+      </a>
+      <a href="question-why-attacks-happen.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">Why do shark attacks happen?</p>
+      </a>
+      <a href="question-dangerous-types.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">What types of sharks are dangerous?</p>
+      </a>
+    </div>
   </footer>
 
-    <script>
+  <script>
 
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-        
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
           }
         }
-        </script>
+      }
+    }
+  </script>
 </body>
+
 </html>
