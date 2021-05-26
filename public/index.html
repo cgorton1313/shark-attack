@@ -14,19 +14,22 @@
 </head>
 
 <body>
-    <!-- top bar - dropdown not yet inserted -->
-    <div class="w3-cell-row header-bar">
-        <div class="w3-row-item w3-half">
-            <button class="w3-bar-item w3-button w3-hover-none">
-                <p><img src="img/sharkicon.jpg" alt="shark icon" width="100" height="100" class="w3-hover-none">
+    <!-- top bar -->
+    <div class="header w3-cell-row">
+        <div class="w3-row-item">
+            <button class="w3-button w3-hover-none">
+                <p><img src="img/sharkicon.jpg" alt="shark icon" width="100" height="60" class="w3-hover-none">
                 </p>
             </button>
-        </div>
-        <div class="w3-quarter w3-row-item">
-        <!-- hide button -->
+        </div>      
+
+    <!-- hide button -->
+        <div class= "hidebtn w3-row-item">
             <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Sherman the Shark</button>
         </div>
-        <div class="dropdown w3-row-item w3-quarter w3-right">
+
+    <!-- menu drop down -->
+        <div class="dropdown w3-row-item">
             <button onclick="dropdownMenu()" class="dropbtn">Menu</button>
             <div id="myDropdown" class="dropdown-content">
               <a href="question-dangerous-types.html">Shark Types</a>
