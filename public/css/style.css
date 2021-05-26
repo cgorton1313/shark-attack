@@ -17,7 +17,7 @@
     margin-top:20px;
 }
 .cards{
-    width:28%;
+    width:100%;
     padding: 2%;
 }
 #column1{
@@ -57,6 +57,8 @@
 }
 #about-text{
     margin-bottom: 3%;
+    margin-left:10%;
+    margin-right: 10%;
 }
 .footer-column-filler-text{
     color:#66999B;
@@ -126,8 +128,9 @@
     text-decoration: none;
   }
   .footer-mascot{
-      width:200px;
+      width:130px;
       position:fixed;
+      margin-left: 30px;
   }
 .hide-shark-button{
     background-color:#66999B;
