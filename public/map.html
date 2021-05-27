@@ -1,135 +1,167 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="shark-attack.ico">
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="js/geochart.js"></script>
-    <title>Shark Attacks: Data Map</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="shark-attack.ico">
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="js/geochart.js"></script>
+  <title>Shark Attacks: Data Map</title>
 </head>
 
 <body>
-    <!-- top bar - dropdown not yet inserted -->
-    <div class="w3-cell-row header-bar">
-        <div class="w3-row-item w3-half">
-          <button class = "w3-bar-item w3-button">
-            <p><a href="index.html"><img src="img/sharkicon.jpg" alt="shark icon" width="60"  height="60"></a>
-            </p>
-          </button>
-        </div>
-        
-        <!-- hide button -->
-        <a href="#" class= "hidebtn w3-bar-item">
-          <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Sherman the Shark</button>
-      </a>
-
-      
-        <div class="dropdown w3-row-item w3-quarter w3-right">
-            <button onclick="dropdownMenu()" class="dropbtn">Menu</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="index.html">Home</a>
-              <a href="question-dangerous-types.html">Shark Types</a>
-              <a href="table.html">Data</a>
-            </div>
-          </div>
+  <!-- top bar -->
+  <div class="w3-bar">
+    <a href="#" class="w3-bar-item w3-button">
+      <p><img src="img/sharkicon.jpg" alt="shark icon" width="60" height="60" class="w3-hover-none">
+      </p>
+    </a>
+    <!-- hide button -->
+    <a href="#" class="hidebtn w3-bar-item">
+      <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Sherman the
+        Shark</button>
+    </a>
+    <!-- menu drop down -->
+    <div class="dropdown w3-dropdown-hover w3-right">
+      <button onclick="dropdownMenu()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="question-dangerous-types.html">Shark Types</a>
+        <a href="map.html">Map</a>
+        <a href="table.html">Data</a>
+      </div>
     </div>
-    
-    <!--Question and text-->
-    <h1 class="w3-center question-large">Shark Attacks Across the World</h1>
-    <h3 class="w3-center w3-margin">Hover over each country to see stastics about shark attacks.</h3>
+  </div>
 
-    <!--map chart-->
-        <div id="regions_div" style="width: 1560px; height: 865px;"></div>
+  <!--Question and text-->
+  <h1 class="w3-center question-large">Shark Attacks Across the World</h1>
+  <h3 class="w3-center w3-margin">Hover over each country to see stastics about shark attacks.</h3>
 
-    <!--shark man!-->
-    <img id="shark-man" class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
+  <!--map chart-->
+  <div id="regions_div" style="width: 1560px; height: 865px;"></div>
 
-    <!--Footer-->
-    <footer class="main-footer w3-container w3-cell-row">
-      <div class="w3-half footer-left-text">
-          <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and Further Information<br><br>&copy May 2021</p>
-      </div>
-      <div class="w3-half">
-          <a href="question-what-is.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">What is a shark attack?</p></a>
-          <a href="question-why-attacks-happen.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">Why do shark attacks happen?</p></a>
-          <a href="question-dangerous-types.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">What types of sharks are dangerous?</p></a>
-      </div>
+  <!--shark man!-->
+  <img id="shark-man" class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
+
+  <!--Footer-->
+  <footer class="main-footer w3-container w3-cell-row">
+    <div class="w3-half footer-left-text">
+      <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin
+        Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and Further
+        Information<br><br>&copy May 2021</p>
+    </div>
+    <div class="w3-half">
+      <a href="question-what-is.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">What is a shark attack?</p>
+      </a>
+      <a href="question-why-attacks-happen.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">Why do shark attacks happen?</p>
+      </a>
+      <a href="question-dangerous-types.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">What types of sharks are dangerous?</p>
+      </a>
+    </div>
   </footer>
 
-    <script>
-      let toggle = "shown";
-        function dropdownMenu() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-        
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
+  <script>
+
+    let sharkIsShowing = true;
+    function sharkButtonClicked() {
+      if (sharkIsShowing == true) {
+        hideShark();
+        sharkIsShowing = false;
+      } else {
+        showShark();
+        sharkIsShowing = true;
+      }
+    }
+
+    function dropdownMenu() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function hideShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-hide');
+    }
+
+    function showShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
+    }
+
+
+    let toggle = "shown";
+    function dropdownMenu() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
           }
         }
+      }
+    }
 
-        google.charts.load('current', {
-          'packages':['geochart'],
-          // Note: you will need to get a mapsApiKey for your project.
-          // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-          'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
-        });
-        google.charts.setOnLoadCallback(drawRegionsMap);
+    google.charts.load('current', {
+      'packages': ['geochart'],
+      // Note: you will need to get a mapsApiKey for your project.
+      // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+      'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+    });
+    google.charts.setOnLoadCallback(drawRegionsMap);
 
-        function drawRegionsMap() {
-          var data = google.visualization.arrayToDataTable([
-            ['Country', 'Number of Attacks'],
-            ['Germany', 200],
-            ['United States', 300],
-            ['Brazil', 400],
-            ['Canada', 100],
-            ['France', 600],
-            ['RU', 450]
-          ]);
+    function drawRegionsMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Number of Attacks'],
+        ['Germany', 200],
+        ['United States', 300],
+        ['Brazil', 400],
+        ['Canada', 100],
+        ['France', 600],
+        ['RU', 450]
+      ]);
 
-          var options = {};
+      var options = {};
 
-          var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
-          chart.draw(data, options);
-        }
-        // function hideShark(){
-        //   if (toggle == "shown"){
-        //     document.getElementById("shark-man").setAttribute('class', 'w3-display-bottomleft footer-mascot w3-hide');
-        //     document.getElementById("hide-button").innerHTML = "Show Sherman the Shark";
-        //     toggle = "hidden"; 
-        //   }
-        //   if (toggle == "hidden"){
-        //     document.getElementById("shark-man").setAttribute('class', 'w3-display-bottomleft footer-mascot');
-        //     document.getElementById("hide-button").innerHTML = "Hide Sherman the Shark";
-        //     toggle = "shown"; 
-        //   }
-        // }
-        let sharkIsShowing = true;
-        function sharkButtonClicked(){
-            if (sharkIsShowing == true){
-                hideShark();
-                sharkIsShowing = false;
-            } else {
-                showShark();
-                sharkIsShowing = true;
-            }
-        }
-        function hideShark() {
-            document.getElementById("shark-man").setAttribute('class', 'w3-hide');
-        }
+      chart.draw(data, options);
+    }
+    // function hideShark(){
+    //   if (toggle == "shown"){
+    //     document.getElementById("shark-man").setAttribute('class', 'w3-display-bottomleft footer-mascot w3-hide');
+    //     document.getElementById("hide-button").innerHTML = "Show Sherman the Shark";
+    //     toggle = "hidden"; 
+    //   }
+    //   if (toggle == "hidden"){
+    //     document.getElementById("shark-man").setAttribute('class', 'w3-display-bottomleft footer-mascot');
+    //     document.getElementById("hide-button").innerHTML = "Hide Sherman the Shark";
+    //     toggle = "shown"; 
+    //   }
+    // }
+    let sharkIsShowing = true;
+    function sharkButtonClicked() {
+      if (sharkIsShowing == true) {
+        hideShark();
+        sharkIsShowing = false;
+      } else {
+        showShark();
+        sharkIsShowing = true;
+      }
+    }
+    function hideShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-hide');
+    }
 
-        function showShark(){
-            document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
-        }
-        </script>
+    function showShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
+    }
+  </script>
 </body>
+
 </html>

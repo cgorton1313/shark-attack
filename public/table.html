@@ -10,29 +10,27 @@
 </head>
 
 <body>
-    <!-- top bar - dropdown not yet inserted -->
-    <div class="w3-cell-row header-bar">
-        <div class="w3-row-item w3-half">
-          <button class = "w3-bar-item w3-button">
-            <p><a href="index.html"><img src="img/sharkicon.jpg" alt="shark icon" width="60"  height="60"></a>
-            </p>
-          </button>
-        </div>
-
-         <!-- hide button -->
-         <a href="#" class= "hidebtn w3-bar-item">
-          <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Sherman the Shark</button>
-      </a>
-
-        <div class="dropdown w3-row-item w3-quarter w3-right">
-            <button onclick="dropdownMenu()" class="dropbtn">Menu</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="index.html">Home</a>
-              <a href="question-dangerous-types.html">Shark Types</a>
-              <a href="map.html">Map</a>
-            </div>
+        <!-- top bar -->
+        <div class="w3-bar">
+          <a href="#" class="w3-bar-item w3-button">
+              <p><img src="img/sharkicon.jpg" alt="shark icon" width="60" height="60" class="w3-hover-none">
+              </p>
+          </a>
+          <!-- hide button -->
+          <a href="#" class="hidebtn w3-bar-item">
+              <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Sherman
+                  the Shark</button>
+          </a>
+          <!-- menu drop down -->
+          <div class="dropdown w3-dropdown-hover w3-right">
+              <button onclick="dropdownMenu()" class="dropbtn">Menu</button>
+              <div id="myDropdown" class="dropdown-content">
+                  <a href="question-dangerous-types.html">Shark Types</a>
+                  <a href="map.html">Map</a>
+                  <a href="table.html">Data</a>
+              </div>
           </div>
-    </div>
+      </div>
     
     <!--Question and text-->
     <h1 class="w3-center question-large">Shark Attack Data</h1>
@@ -57,6 +55,31 @@
   </footer>
 
     <script>
+
+let sharkIsShowing = true;
+        function sharkButtonClicked() {
+            if (sharkIsShowing == true) {
+                hideShark();
+                sharkIsShowing = false;
+            } else {
+                showShark();
+                sharkIsShowing = true;
+            }
+        }
+
+        function dropdownMenu() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function hideShark() {
+            document.getElementById("shark-man").setAttribute('class', 'w3-hide');
+        }
+
+        function showShark() {
+            document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
+        }
+
+        
       let toggle = "shown";
         function dropdownMenu() {
           document.getElementById("myDropdown").classList.toggle("show");
