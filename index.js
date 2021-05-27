@@ -5,8 +5,6 @@ timestampFormat: 'YYYY-MM-DD HH:mm:ss.SSS'
 },
 log = SimpleNodeLogger.createSimpleLogger(opts);
 
-
-
 const config = require(__dirname + '/config.js');
 const sharkAttackData = require(__dirname + '/sharkAttackData.js');
 const express = require('express');
