@@ -35,7 +35,7 @@
 
 
   <!--shark man!-->
-  <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
+  <img id="shark-man" class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
 
   <!--Question and text-->
   <h1 class="w3-center question-large">What types of sharks are dangerous?</h1>
@@ -188,6 +188,24 @@
           }
         }
       }
+    }
+
+    let sharkIsShowing = true;
+    function sharkButtonClicked() {
+      if (sharkIsShowing == true) {
+        hideShark();
+        sharkIsShowing = false;
+      } else {
+        showShark();
+        sharkIsShowing = true;
+      }
+    }
+    function hideShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-hide');
+    }
+
+    function showShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
     }
   </script>
 </body>
