@@ -98,17 +98,34 @@ let sharkIsShowing = true;
           }
         }
 
-        function hideShark(){
-          if (toggle == "shown"){
-            document.getElementById("shark-man").setAttribute('class', 'w3-display-bottomleft footer-mascot w3-hide');
-            document.getElementById("hide-button").innerHTML = "Show Sherman the Shark";
-            toggle = "hidden"; 
-          }
-          if (toggle == "hidden"){
-            document.getElementById("shark-man").setAttribute('class', 'w3-display-bottomleft footer-mascot');
-            document.getElementById("hide-button").innerHTML = "Hide Sherman the Shark";
-            toggle = "shown"; 
-          }
+        // function hideShark(){
+        //   if (toggle == "shown"){
+        //     document.getElementById("shark-man").setAttribute('class', 'w3-display-bottomleft footer-mascot w3-hide');
+        //     document.getElementById("hide-button").innerHTML = "Show Sherman the Shark";
+        //     toggle = "hidden"; 
+        //   }
+        //   if (toggle == "hidden"){
+        //     document.getElementById("shark-man").setAttribute('class', 'w3-display-bottomleft footer-mascot');
+        //     document.getElementById("hide-button").innerHTML = "Hide Sherman the Shark";
+        //     toggle = "shown"; 
+        //   }
+        // }
+        let sharkIsShowing = true;
+        function sharkButtonClicked(){
+            if (sharkIsShowing == true){
+                hideShark();
+                sharkIsShowing = false;
+            } else {
+                showShark();
+                sharkIsShowing = true;
+            }
+        }
+        function hideShark() {
+            document.getElementById("shark-man").setAttribute('class', 'w3-hide');
+        }
+
+        function showShark(){
+            document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
         }
         </script>
 </body>
