@@ -29,6 +29,11 @@
           </div>
     </div>
 
+  <!-- hide button -->
+  <div class= "hidebtn w3-row-item">
+    <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Sherman the Shark</button>
+</div>
+
     <!--Question and text-->
     <h1 class="w3-center question-large">What is a shark attack?</h1>
 
@@ -47,7 +52,7 @@
     </div>
 
     <!--shark man!-->
-    <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
+    <img id="shark-man" class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
 
     <!--Footer-->
     <footer class="main-footer w3-container w3-cell-row">
@@ -79,6 +84,26 @@
             }
           }
         }
+
+        let sharkIsShowing = true;
+        function sharkButtonClicked(){
+            if (sharkIsShowing == true){
+                hideShark();
+                sharkIsShowing = false;
+            } else {
+                showShark();
+                sharkIsShowing = true;
+            }
+        }
+        function hideShark() {
+            document.getElementById("shark-man").setAttribute('class', 'w3-hide');
+        }
+
+        function showShark(){
+            document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
+        }
         </script>
+
+
 </body>
 </html>
