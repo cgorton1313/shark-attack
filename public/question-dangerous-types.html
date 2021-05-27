@@ -13,7 +13,7 @@
 <body>
   <!-- top bar -->
   <div class="w3-bar">
-    <a href="#" class="w3-bar-item w3-button">
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-none">
       <p><img src="img/sharkicon.jpg" alt="shark icon" width="60" height="60" class="w3-hover-none">
       </p>
     </a>
@@ -122,13 +122,6 @@
 
 
 
-
-
-
-
-
-
-
   <!--Footer-->
   <footer class="main-footer w3-container w3-cell-row">
     <div class="w3-half footer-left-text">
@@ -191,23 +184,6 @@
       }
     }
 
-    let sharkIsShowing = true;
-    function sharkButtonClicked() {
-      if (sharkIsShowing == true) {
-        hideShark();
-        sharkIsShowing = false;
-      } else {
-        showShark();
-        sharkIsShowing = true;
-      }
-    }
-    function hideShark() {
-      document.getElementById("shark-man").setAttribute('class', 'w3-hide');
-    }
-
-    function showShark() {
-      document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
-    }
   </script>
 </body>
 
