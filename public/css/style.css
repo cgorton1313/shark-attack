@@ -29,14 +29,12 @@
 #links-divs{
     width:85%;
 }
-.menu-card-head-text-1{
-    color:#2B3A67;
-}
-.menu-card-head-text-2{
+.menu-card-head-text{
     color:#2B3A67;
     padding-top:18px;
     padding-bottom:18px;
 }
+
 #about-head-text{
     color:#B3AF8F;
 }
