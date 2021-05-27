@@ -1,3 +1,10 @@
+const SimpleNodeLogger = require('simple-node-logger'),
+opts = {
+logFilePath: 'sharkAttack.log',
+timestampFormat: 'YYYY-MM-DD HH:mm:ss.SSS'
+},
+log = SimpleNodeLogger.createSimpleLogger(opts);
+
 const config = require('./config.js');
 const mysql = require('mysql');
 const util = require('util');
@@ -24,9 +31,9 @@ async function getQueryData(sql) {
 
     connection.connect(function (err) {
         if (err) {
-            console.info('error when connectin to db:', err);
+            log.info('error when connectin to db:', err);
         } else {
-            console.info('Connected to database ' + config.db.database + ' as user ' + config.db.user);
+            log.info('Connected to database ' + config.db.database + ' as user ' + config.db.user);
         }
     });
     let query = util.promisify(connection.query).bind(connection);
@@ -35,7 +42,7 @@ async function getQueryData(sql) {
     try {
         result = await query(sql);
     } catch (err) {
-        console.info(err);
+        log.info(err);
         result = '{Error}'
     }
     connection.end();
