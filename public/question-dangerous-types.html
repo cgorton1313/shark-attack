@@ -11,28 +11,34 @@
 </head>
 
 <body>
-    <!-- top bar -->
-    <div class="w3-cell-row header-bar">
-        <div class="w3-row-item w3-threequarter">
-          <button class = "w3-bar-item w3-button">
-            <p><a href="index.html"><img src="img/sharkicon.jpg" alt="shark icon" width="60"  height="60"></a>
-            </p>
-          </button>
-        </div>
-        <div class="dropdown w3-row-item w3-quarter w3-right">
-            <button onclick="myFunction()" class="dropbtn">Menu</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="index.html">Home</a>
-              <a href="question-dangerous-types.html">Shark Types</a>
-              <a href="map.html">Map</a>
-              <a href="table.html">Data</a>
-            </div>
-          </div>
+  <!-- top bar -->
+  <div class="w3-cell-row header-bar">
+    <div class="w3-row-item w3-threequarter">
+      <button class="w3-bar-item w3-button">
+        <p><a href="index.html"><img src="img/sharkicon.jpg" alt="shark icon" width="60" height="60"></a>
+        </p>
+      </button>
     </div>
- 
+    <div class="dropdown w3-row-item w3-quarter w3-right">
+      <button onclick="myFunction()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="question-dangerous-types.html">Shark Types</a>
+        <a href="map.html">Map</a>
+        <a href="table.html">Data</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- hide button -->
+  <a href="#" class="hidebtn w3-bar-item">
+    <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Sherman the
+      Shark</button>
+  </a>
+
 
   <!--shark man!-->
-  <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
+  <img id="shark-man" class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
 
   <!--Question and text-->
   <h1 class="w3-center question-large">What types of sharks are dangerous?</h1>
@@ -60,7 +66,7 @@
       <!--insert number icon-->
     </div>
 
-    
+
     <div class="w3-third w3-card w3-margin cards">
       <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Tiger Shark</strong></h3>
       <div class='w3-center'>
@@ -83,7 +89,7 @@
 
   <div class="w3-row">
 
-  <div class="w3-third w3-card w3-margin cards">
+    <div class="w3-third w3-card w3-margin cards">
       <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Nurse Shark</strong></h3>
       <div class='w3-center'>
         <img src="img/bullshark.jpg" width="100">
@@ -91,8 +97,8 @@
       <p> 5% of attacks on humans are from Nurse Sharks <br> 1% of Nurse Shark attacks are fatal</p>
       <!--insert number icon-->
     </div>
-    
-  
+
+
 
     <div class="w3-third w3-card w3-margin cards">
       <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Reef Shark</strong>
@@ -106,8 +112,8 @@
 
     <div class="w3-third w3-card w3-margin cards">
       <h3 class="head-font menu-card-head-text w3-hover-text-light-blue w3-center"><strong>Whaler Shark</strong></h3>
-      <div class= 'w3-center'>
-      <img src="img/whalershark.jpg" width="100">
+      <div class='w3-center'>
+        <img src="img/whalershark.jpg" width="100">
       </div>
       <p> 3% of attacks on humans are from Whaler Sharks <br> 7% of Whaler Shark attacks are fatal</p>
       <!--insert number icon-->
@@ -162,6 +168,24 @@
           }
         }
       }
+    }
+
+    let sharkIsShowing = true;
+    function sharkButtonClicked() {
+      if (sharkIsShowing == true) {
+        hideShark();
+        sharkIsShowing = false;
+      } else {
+        showShark();
+        sharkIsShowing = true;
+      }
+    }
+    function hideShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-hide');
+    }
+
+    function showShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
     }
   </script>
 </body>
