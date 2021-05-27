@@ -1,84 +1,127 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="shark-attack.ico">
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="js/pie-chart.js"></script>
-    <title>Shark Attacks: What Is a Shark Attack?</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="shark-attack.ico">
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="js/pie-chart.js"></script>
+  <title>Shark Attacks: What Is a Shark Attack?</title>
 </head>
 
 <body>
-    <!-- top bar -->
-    <div class="w3-cell-row header-bar">
-        <div class="w3-row-item w3-threequarter">
-          <button class = "w3-bar-item w3-button">
-            <p><a href="index.html"><img src="img/sharkicon.jpg" alt="shark icon" width="60"  height="60"></a>
-            </p>
-          </button>
-        </div>
-        <div class="dropdown w3-row-item w3-quarter w3-right">
-            <button onclick="myFunction()" class="dropbtn">Menu</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="index.html">Home</a>
-              <a href="question-dangerous-types.html">Shark Types</a>
-              <a href="map.html">Map</a>
-              <a href="table.html">Data</a>
-            </div>
-          </div>
-    </div>
-
-    <!--Question and text-->
-    <h1 class="w3-center question-large">What is a shark attack?</h1>
-
-    <!--pi chart-->
-    <div class="w3-row">
-        <div class="w3-third">
-            <div id="chart_div">
-            </div>
-        </div>
-        <div class="w3-twothird">
-          <p class="what-is-shark-body">A shark attack is officially described as any attack on a human by a shark, but what does that really mean?
-            <br><br>Does it mean injuries? Deaths? Aggressive conversations?? Shark attacks install a certain amount of fear in people, despite their rarity, because of horror movies like <i>Jaws</i> or <i>50 Meters Down</i>.
-            <br>In reality, <b>Only 1 in 6 shark attacks are fatal.</b>
-            <br><br>Sharks are more likely to bite a small section of the body such as an ankle, wrist, arm, or leg than anything fatal. Once the shark discovers it's a human, the shark sometimes stops and swims away. Usually these injuries are minor and usually they are accidental. To a shark, a surfer, swimmer, or kayak, looks very similar to a seal or fish. </p>
-        </div>
-    </div>
-
-    <!--shark man!-->
-    <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
-
-    <!--Footer-->
-    <footer class="main-footer w3-container w3-cell-row">
-      <div class="w3-half footer-left-text">
-          <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and Further Information<br><br>&copy May 2021</p>
+  <!-- top bar -->
+  <div class="w3-bar">
+    <a href="#" class="w3-bar-item w3-button">
+      <p><img src="img/sharkicon.jpg" alt="shark icon" width="60" height="60" class="w3-hover-none">
+      </p>
+    </a>
+    <!-- hide button -->
+    <a href="#" class="hidebtn w3-bar-item">
+      <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Sherman the
+        Shark</button>
+    </a>
+    <!-- menu drop down -->
+    <div class="dropdown w3-dropdown-hover w3-right">
+      <button onclick="dropdownMenu()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="question-dangerous-types.html">Shark Types</a>
+        <a href="map.html">Map</a>
+        <a href="table.html">Data</a>
       </div>
-      <div class="w3-half">
-          <a href="question-what-is.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">What is a shark attack?</p></a>
-          <a href="question-why-attacks-happen.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">Why do shark attacks happen?</p></a>
-          <a href="question-dangerous-types.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">What types of sharks are dangerous?</p></a>
+    </div>
+  </div>
+
+  <!--Question and text-->
+  <h1 class="w3-center question-large">What is a shark attack?</h1>
+
+  <!--pi chart-->
+  <div class="w3-row">
+    <div class="w3-third">
+      <div id="chart_div">
       </div>
+    </div>
+    <div class="w3-twothird">
+      <p class="what-is-shark-body">A shark attack is officially described as any attack on a human by a shark, but what
+        does that really mean?
+        <br><br>Does it mean injuries? Deaths? Aggressive conversations?? Shark attacks install a certain amount of fear
+        in people, despite their rarity, because of horror movies like <i>Jaws</i> or <i>50 Meters Down</i>.
+        <br>In reality, <b>Only 1 in 6 shark attacks are fatal.</b>
+        <br><br>Sharks are more likely to bite a small section of the body such as an ankle, wrist, arm, or leg than
+        anything fatal. Once the shark discovers it's a human, the shark sometimes stops and swims away. Usually these
+        injuries are minor and usually they are accidental. To a shark, a surfer, swimmer, or kayak, looks very similar
+        to a seal or fish.
+      </p>
+    </div>
+  </div>
+
+  <!--shark man!-->
+  <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
+
+  <!--Footer-->
+  <footer class="main-footer w3-container w3-cell-row">
+    <div class="w3-half footer-left-text">
+      <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin
+        Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and Further
+        Information<br><br>&copy May 2021</p>
+    </div>
+    <div class="w3-half">
+      <a href="question-what-is.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">What is a shark attack?</p>
+      </a>
+      <a href="question-why-attacks-happen.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">Why do shark attacks happen?</p>
+      </a>
+      <a href="question-dangerous-types.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">What types of sharks are dangerous?</p>
+      </a>
+    </div>
   </footer>
 
-    <script>
+  <script>
 
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-        
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
+    let sharkIsShowing = true;
+    function sharkButtonClicked() {
+      if (sharkIsShowing == true) {
+        hideShark();
+        sharkIsShowing = false;
+      } else {
+        showShark();
+        sharkIsShowing = true;
+      }
+    }
+
+    function dropdownMenu() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function hideShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-hide');
+    }
+
+    function showShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
+    }
+
+
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
           }
         }
-        </script>
+      }
+    }
+  </script>
 </body>
+
 </html>

@@ -1,83 +1,124 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="shark-attack.ico">
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="table-testing/pie-chart.js"></script>
-    <title>Shark Attacks: Why do they Happen?</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="shark-attack.ico">
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="table-testing/pie-chart.js"></script>
+  <title>Shark Attacks: Why do they Happen?</title>
 </head>
 
 <body>
-    <!-- top bar - dropdown not yet inserted -->
-    <div class="w3-cell-row header-bar">
-        <div class="w3-row-item w3-threequarter">
-          <button class = "w3-bar-item w3-button">
-            <p><a href="index.html"><img src="img/sharkicon.jpg" alt="shark icon" width="60"  height="60"></a>
-            </p>
-          </button>
-        </div>
-        <div class="dropdown w3-row-item w3-quarter w3-right">
-            <button onclick="myFunction()" class="dropbtn">Menu</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="index.html">Home</a>
-              <a href="question-dangerous-types.html">Shark Types</a>
-              <a href="map.html">Map</a>
-              <a href="table.html">Data</a>
-            </div>
-          </div>
-    </div>
-    
-    <!--shark man!-->
-    <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
-
-    <!--Question and text-->
-    <h1 class="w3-center question-large">Why do shark attacks happen?</h1>
-
-    <!--pi chart-->
-    <div class="w3-row">
-        <div class="w3-third">
-            <!--insert chart here-->>
-            </div>
-        </div>
-        <div class="w3-center">
-          <p class="what-is-shark-body">
-            There are two types of shark attacks: provoked attacks and unprovoked attacks. Data shows that most provoked attacks occur when a human invades a sharks habitat and space or bothers its space and natural habits. Unprovoked attacks are when a shark attacks a human without a specific reason. Unprovoked attacks are very rarely done with malicious intent, like many shark movies will have you believe. Sometimes sharks think a surfer or person on a boat is prey and attacks them, then swims away once they realize their mistake. 
-          </p><!--answer this question-->
-        </div>
-    </div>
-
-    <!--Footer-->
-    <footer class="main-footer w3-container w3-cell-row">
-      <div class="w3-half footer-left-text">
-          <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and Further Information<br><br>&copy May 2021</p>
+  <!-- top bar -->
+  <div class="w3-bar">
+    <a href="#" class="w3-bar-item w3-button">
+      <p><img src="img/sharkicon.jpg" alt="shark icon" width="60" height="60" class="w3-hover-none">
+      </p>
+    </a>
+    <!-- hide button -->
+    <a href="#" class="hidebtn w3-bar-item">
+      <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Sherman the
+        Shark</button>
+    </a>
+    <!-- menu drop down -->
+    <div class="dropdown w3-dropdown-hover w3-right">
+      <button onclick="dropdownMenu()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="question-dangerous-types.html">Shark Types</a>
+        <a href="map.html">Map</a>
+        <a href="table.html">Data</a>
       </div>
-      <div class="w3-half">
-          <a href="question-what-is.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">What is a shark attack?</p></a>
-          <a href="question-why-attacks-happen.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">Why do shark attacks happen?</p></a>
-          <a href="question-dangerous-types.html"><p class="w3-hover-text-light-blue w3-right-align footer-text-two">What types of sharks are dangerous?</p></a>
-      </div>
+    </div>
+  </div>
+
+  <!--shark man!-->
+  <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
+
+  <!--Question and text-->
+  <h1 class="w3-center question-large">Why do shark attacks happen?</h1>
+
+  <!--pi chart-->
+  <div class="w3-row">
+    <div class="w3-third">
+      <!--insert chart here-->>
+    </div>
+  </div>
+  <div class="w3-center">
+    <p class="what-is-shark-body">
+      There are two types of shark attacks: provoked attacks and unprovoked attacks. Data shows that most provoked
+      attacks occur when a human invades a sharks habitat and space or bothers its space and natural habits. Unprovoked
+      attacks are when a shark attacks a human without a specific reason. Unprovoked attacks are very rarely done with
+      malicious intent, like many shark movies will have you believe. Sometimes sharks think a surfer or person on a
+      boat is prey and attacks them, then swims away once they realize their mistake.
+    </p>
+    <!--answer this question-->
+  </div>
+  </div>
+
+  <!--Footer-->
+  <footer class="main-footer w3-container w3-cell-row">
+    <div class="w3-half footer-left-text">
+      <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin
+        Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and Further
+        Information<br><br>&copy May 2021</p>
+    </div>
+    <div class="w3-half">
+      <a href="question-what-is.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">What is a shark attack?</p>
+      </a>
+      <a href="question-why-attacks-happen.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">Why do shark attacks happen?</p>
+      </a>
+      <a href="question-dangerous-types.html">
+        <p class="w3-hover-text-light-blue w3-right-align footer-text-two">What types of sharks are dangerous?</p>
+      </a>
+    </div>
   </footer>
 
-    <script>
+  <script>
 
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-        
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
+    let sharkIsShowing = true;
+    function sharkButtonClicked() {
+      if (sharkIsShowing == true) {
+        hideShark();
+        sharkIsShowing = false;
+      } else {
+        showShark();
+        sharkIsShowing = true;
+      }
+    }
+
+    function dropdownMenu() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function hideShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-hide');
+    }
+
+    function showShark() {
+      document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
+    }
+
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
           }
         }
-        </script>
+      }
+    }
+  </script>
 </body>
+
 </html>
