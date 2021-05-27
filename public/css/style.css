@@ -1,4 +1,4 @@
-.header{
+.w3-bar{
     background-color: #2B3A67;
 }
 .header-question-text{
@@ -86,6 +86,7 @@
   
   .dropdown {
     float:right;
+    position: relative;
   }
 
   .dropdown a:hover {background-color: #ddd;}
