@@ -121,13 +121,6 @@
 
 
 
-
-
-
-
-
-
-
   <!--Footer-->
   <footer class="main-footer w3-container w3-cell-row">
     <div class="w3-half footer-left-text">
@@ -190,23 +183,6 @@
       }
     }
 
-    let sharkIsShowing = true;
-    function sharkButtonClicked() {
-      if (sharkIsShowing == true) {
-        hideShark();
-        sharkIsShowing = false;
-      } else {
-        showShark();
-        sharkIsShowing = true;
-      }
-    }
-    function hideShark() {
-      document.getElementById("shark-man").setAttribute('class', 'w3-hide');
-    }
-
-    function showShark() {
-      document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
-    }
   </script>
 </body>
 
