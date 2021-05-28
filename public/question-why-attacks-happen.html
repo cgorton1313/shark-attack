@@ -17,11 +17,7 @@
       <p><img src="img/sharkicon.jpg" alt="shark icon" width="60" height="60" class="w3-hover-none">
       </p>
     </a>
-    <!-- hide button -->
-    <a href="#" class="hidebtn w3-bar-item">
-      <button class="hide-shark-button w3-button w3-hover-text-light-blue" onclick="sharkButtonClicked()">Sherman the
-        Shark</button>
-    </a>
+   
     <!-- menu drop down -->
     <div class="dropdown w3-dropdown-hover w3-right">
       <button onclick="dropdownMenu()" class="dropbtn">Menu</button>
@@ -33,9 +29,6 @@
       </div>
   </div>
   </div>
-
-  <!--shark man!-->
-  <img class="w3-display-bottomleft footer-mascot" src="img/shark-mascot.png">
 
   <!--Question and text-->
   <h1 class="w3-center question-large">Why do shark attacks happen?</h1>
@@ -79,27 +72,9 @@
   </footer>
 
   <script>
-    let sharkIsShowing = true;
-    function sharkButtonClicked() {
-      if (sharkIsShowing == true) {
-        hideShark();
-        sharkIsShowing = false;
-      } else {
-        showShark();
-        sharkIsShowing = true;
-      }
-    }
 
     function dropdownMenu() {
       document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    function hideShark() {
-      document.getElementById("shark-man").setAttribute('class', 'w3-hide');
-    }
-
-    function showShark() {
-      document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
     }
 
     function myFunction() {
