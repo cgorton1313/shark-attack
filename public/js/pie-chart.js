@@ -1,3 +1,4 @@
+let chart, data, options;
 // Load the Visualization API and the corechart package.
 google.charts.load('current', { 'packages': ['corechart'] });
 
@@ -10,7 +11,7 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
 
     // Create the data table.
-    var data = new google.visualization.DataTable();
+    data = new google.visualization.DataTable();
     data.addColumn('string', 'Shark Type');
     data.addColumn('number', 'Attacks');
     // TODO:    change out this mock data with real data that you get by querying the database (manually)
@@ -24,12 +25,18 @@ function drawChart() {
     ]);
 
     // Set chart options
-    var options = {
+    options = {
         title: 'Fatalities of Shark Attacks',
     };
 
     // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-    console.log(chart);
+    chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     chart.draw(data, options);
 }
+
+function resize () {
+    chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+  
+  window.onresize = resize;

@@ -1,4 +1,4 @@
-let chart;
+let chart, data, options;
 
 google.charts.load('current', { 'packages': ['geochart'] });
 google.charts.setOnLoadCallback(drawRegionsMap);
@@ -18,21 +18,15 @@ async function drawRegionsMap() {
     countryChartData.push(tempArray);
   }
 
-  let data = google.visualization.arrayToDataTable(countryChartData);
-  let options = {}; // if we want any options on the geochart, they go here
+  data = google.visualization.arrayToDataTable(countryChartData);
+  options = {}; // if we want any options on the geochart, they go here
   chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
   chart.draw(data, options);
 }
 
-//create trigger to resizeEnd event     
-document.querySelector(window).resize(function() {
-  if(this.resizeTO) clearTimeout(this.resizeTO);
-  this.resizeTO = setTimeout(function() {
-      document.querySelector(this).trigger('resizeEnd');
-  }, 500);
-});
-
-//redraw graph when window resize is completed  
-document.querySelector(window).addEventListener('resizeEnd', function() {
+function resize () {
+  chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
   chart.draw(data, options);
-});
+}
+
+window.onresize = resize;
