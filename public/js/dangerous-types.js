@@ -30,8 +30,7 @@ function drawChart() {
     // Set chart options
     var options = {
         title: '6 Most Dangerous Shark Species',
-        width: 500,
-        height: 400
+
     };
 
     // Instantiate and draw our chart, passing in some options.
