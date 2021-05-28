@@ -26,8 +26,6 @@ function drawChart() {
     // Set chart options
     var options = {
         title: 'Fatalities of Shark Attacks',
-        width: 400,
-        height: 300
     };
 
     // Instantiate and draw our chart, passing in some options.
