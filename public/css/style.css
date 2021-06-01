@@ -126,7 +126,7 @@
   }
 
   .hidebtn {
-    float:right;
+    margin-top: none;
 }
     .hide-shark-button{
     background-color:#66999B;
