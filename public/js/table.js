@@ -3,7 +3,7 @@
 
   async function drawTable() {
 
-    let attackData = await fetch('/attacks');
+    let attackData = await fetch('./attacks');
     attackData = await attackData.json();
     console.log(attackData);
     let tableArray= [];

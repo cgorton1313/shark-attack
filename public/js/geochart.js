@@ -4,7 +4,7 @@ google.charts.load('current', { 'packages': ['geochart'] });
 google.charts.setOnLoadCallback(drawRegionsMap);
 
 async function drawRegionsMap() {
-  let countryData = await fetch('/countryTotal');
+  let countryData = await fetch('./countryTotal');
   countryData = await countryData.json();
   console.log(countryData);
 
