@@ -28,10 +28,11 @@
     <div class="dropdown w3-dropdown-hover w3-right">
       <button class="w3-button dropbtn">Menu</button>
       <div id="myDropdown" class="w3-dropdown-content w3-bar-block" style="right:0">
+        <a href="question-what-is.html" class="w3-bar-item w3-button">What is a Shark Attack?</a>
         <a href="question-dangerous-types.html" class="w3-bar-item w3-button">Dangerous Shark Types</a>
         <a href="question-why-attacks-happen.html" class="w3-bar-item w3-button">Why Do Sharks Attack?</a>
-        <a href="map.html" class="w3-bar-item w3-button">Map</a>
         <a href="table.html" class="w3-bar-item w3-button">Data</a>
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
       </div>
     </div>
   </div>
@@ -108,34 +109,7 @@
         }
       }
     }
-
-    google.charts.load('current', {
-      'packages': ['geochart'],
-      // Note: you will need to get a mapsApiKey for your project.
-      // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-      'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
-    });
-    google.charts.setOnLoadCallback(drawRegionsMap);
-
-    function drawRegionsMap() {
-      var data = google.visualization.arrayToDataTable([
-        ['Country', 'Number of Attacks'],
-        ['Germany', 200],
-        ['United States', 300],
-        ['Brazil', 400],
-        ['Canada', 100],
-        ['France', 600],
-        ['RU', 450]
-      ]);
-
-      var options = {};
-
-      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
-      chart.draw(data, options);
-    }
-
-  </script>
+</script>
 </body>
 
 </html>
