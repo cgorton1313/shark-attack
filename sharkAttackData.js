@@ -33,6 +33,8 @@ async function getQueryData(sql) {
         database: DATABASE
     });
 
+    log.info(HOST, USER, PASSWORD, DATABASE);
+
     connection.connect(function(err) {
         if (err) {
             log.info('error when connectin to db:', err);
