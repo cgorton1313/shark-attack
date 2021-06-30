@@ -1,11 +1,15 @@
 const SimpleNodeLogger = require('simple-node-logger'),
-opts = {
-logFilePath: 'sharkAttack.log',
-timestampFormat: 'YYYY-MM-DD HH:mm:ss.SSS'
-},
-log = SimpleNodeLogger.createSimpleLogger(opts);
+    opts = {
+        logFilePath: 'sharkAttack.log',
+        timestampFormat: 'YYYY-MM-DD HH:mm:ss.SSS'
+    },
+    log = SimpleNodeLogger.createSimpleLogger(opts);
 
-const config = require('./config.js');
+const HOST = process.env.HOST || '68.66.216.18';
+const USER = process.env.USER || 'penguinh_sharkattack';
+const PASSWORD = process.env.PASSWORD || 'aph_sharkattack!';
+const DATABASE = process.env.DATABASE || 'penguinh_sharkattack';
+
 const mysql = require('mysql');
 const util = require('util');
 
@@ -23,17 +27,17 @@ async function getCountryTotalAttacks() {
 
 async function getQueryData(sql) {
     let connection = mysql.createConnection({
-        host: config.db.host,
-        user: config.db.user,
-        password: config.db.password,
-        database: config.db.database
+        host: HOST,
+        user: USER,
+        password: PASSWORD,
+        database: DATABASE
     });
 
-    connection.connect(function (err) {
+    connection.connect(function(err) {
         if (err) {
             log.info('error when connectin to db:', err);
         } else {
-            log.info('Connected to database ' + config.db.database + ' as user ' + config.db.user);
+            log.info('Connected to database ' + DATABASE + ' as user ' + USER);
         }
     });
     let query = util.promisify(connection.query).bind(connection);
@@ -67,10 +71,12 @@ group by common_name) as fatalCount
 on attackCount.common_name = fatalCount.common_name
 order by percentFatal desc;
 `
-let result = await getQueryData(sql);
-return result;
+    let result = await getQueryData(sql);
+    return result;
 }
 
 module.exports = {
-    getAttacks, getCountryTotalAttacks, numFatalities
+    getAttacks,
+    getCountryTotalAttacks,
+    numFatalities
 }
