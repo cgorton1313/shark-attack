@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    Heroku
     <!-- top bar -->
     <div class="w3-bar">
         <a href="index.html" class="w3-bar-item w3-button w3-hover-none">
@@ -50,24 +51,21 @@
     <!-- rotating banner -->
     <div class="rotating-banner">
         <a href="question-what-is.html">
-            <div style="background-image: url('img/shark-banner-one.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"
-                class="w3-container">
+            <div style="background-image: url('img/shark-banner-one.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;" class="w3-container">
                 <h1 class="header-question-text w3-center w3-hover-text-orange">What is a shark attack?</h1>
             </div>
         </a>
     </div>
     <div class="rotating-banner">
         <a href="question-dangerous-types.html">
-            <div style="background-image: url('img/shark-banner-two.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"
-                class="w3-container">
+            <div style="background-image: url('img/shark-banner-two.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;" class="w3-container">
                 <h1 class="header-question-text w3-center w3-hover-text-orange">What types of sharks are dangerous?</h1>
             </div>
         </a>
     </div>
     <div class="rotating-banner">
         <a href="question-why-attacks-happen.html">
-            <div style="background-image: url('img/shark-banner-three.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"
-                class="w3-container">
+            <div style="background-image: url('img/shark-banner-three.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;" class="w3-container">
                 <h1 class="header-question-text w3-center w3-hover-text-orange">Why do shark attacks happen?</h1>
             </div>
         </a>
@@ -107,29 +105,20 @@
 
     <!--About section-->
     <h1 class="w3-center" id="about-head-text"><b>About</b></h1>
-    <p id="about-text" class="w3-center w3-margin-top w3-padding">Thank you for visiting the Shark Attack File! Our goal
-        is to educate generations on sharks and why they aren’t as scary as you think. You can explore different
-        species, their scientific names, what they look like, and their shark attack statistics in your area and around
-        the world! Are you afraid of seeing Great Whites off the coast of North Carolina? Check out our map and look to
-        see any data from that area! Our website will be able to tell you if shark attacks were provoked or not: was the
-        attack at the fault of the shark, or did the human get too close and personal? Should you go surfing on Plum
-        Island? You can check this out too! Go to our website to see possible threats and data! We believe that the
-        world should stop categorizing sharks as scary monsters, and start to look at the real data and see that shark
-        attacks in your area are less likely than you think. <br> <br> We
-        have a lot of shark data on these pages! Our data is brought
-        to you by the <a href="https://www.sharkattackfile.net/"> <strong> Global Shark Attack File</strong>. This data
-            website is a public collection of information on shark attacks around the world. Do you want more
-            information on
-            shark attacks and why scientists are curious about them? Click our bolded link and remember to alway cite
-            your sources! </a>
+    <p id="about-text" class="w3-center w3-margin-top w3-padding">Thank you for visiting the Shark Attack File! Our goal is to educate generations on sharks and why they aren’t as scary as you think. You can explore different species, their scientific names, what they look like, and their shark attack statistics
+        in your area and around the world! Are you afraid of seeing Great Whites off the coast of North Carolina? Check out our map and look to see any data from that area! Our website will be able to tell you if shark attacks were provoked or not: was
+        the attack at the fault of the shark, or did the human get too close and personal? Should you go surfing on Plum Island? You can check this out too! Go to our website to see possible threats and data! We believe that the world should stop categorizing
+        sharks as scary monsters, and start to look at the real data and see that shark attacks in your area are less likely than you think. <br> <br> We have a lot of shark data on these pages! Our data is brought to you by the
+        <a href="https://www.sharkattackfile.net/">
+        <strong> Global Shark Attack File</strong>. This data website is a public collection of information on shark attacks around the world. Do you want more information on shark attacks and why scientists are curious about them? Click our bolded link
+            and remember to alway cite your sources! </a>
     </p>
 
     <!--Footer-->
     <footer class="main-footer w3-container w3-cell-row">
         <div class="w3-half footer-left-text">
-            <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin
-                Hall<br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and
-                Further Information<br><br>&copy May 2021</p>
+            <p class="footer-text-one">Project created by Web Development students at the Academy at Penguin Hall
+                <br><br>Special thanks to Professor Lutton at Endicott College for Research, Inspiration, and Further Information<br><br>&copy May 2021</p>
         </div>
         <div class="w3-half">
             <a href="question-what-is.html">
@@ -148,6 +137,7 @@
 
     <script>
         let sharkIsShowing = true;
+
         function sharkButtonClicked() {
             if (sharkIsShowing == true) {
                 hideShark();
@@ -170,7 +160,7 @@
             document.getElementById("shark-man").setAttribute('class', 'w3-show w3-display-bottomleft footer-mascot');
         }
 
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (!event.target.matches('.dropbtn')) {
                 var dropdowns = document.getElementsByClassName("dropdown-content");
                 var i;
@@ -192,12 +182,12 @@
                 x[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > x.length) { slideIndex = 1 }
+            if (slideIndex > x.length) {
+                slideIndex = 1
+            }
             x[slideIndex - 1].style.display = "block";
             setTimeout(carousel, 3000);
         }
-
-
     </script>
 </body>
 

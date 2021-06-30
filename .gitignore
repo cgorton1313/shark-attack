@@ -1,8 +1,9 @@
 #Dependency directories
-node_modules/
+/node_modules
 
 config.js
-
 .DS_Store
-
 sharkAttack.log
+npm-debug.log
+
+/*.env

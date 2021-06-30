@@ -1,25 +1,29 @@
 {
-  "name": "sharkattack",
-  "version": "1.0.0",
-  "description": "I am Mr. Gorton I'm SD",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cgortonpenguinhall/sharkattack.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cgortonpenguinhall/sharkattack/issues"
-  },
-  "homepage": "https://github.com/cgortonpenguinhall/sharkattack#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "my-sql": "^1.2.15",
-    "mysql": "^2.18.1",
-    "simple-node-logger": "^18.12.24"
-  }
+    "name": "sharkattack",
+    "version": "1.0.0",
+    "description": "I am Mr. Gorton I'm SD",
+    "engines": {
+        "node": "14.x"
+    },
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cgortonpenguinhall/sharkattack.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/cgortonpenguinhall/sharkattack/issues"
+    },
+    "homepage": "https://github.com/cgortonpenguinhall/sharkattack#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "my-sql": "^1.2.15",
+        "mysql": "^2.18.1",
+        "simple-node-logger": "^18.12.24"
+    }
 }
