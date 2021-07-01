@@ -1,16 +1,14 @@
-const SimpleNodeLogger = require('simple-node-logger'),
-    opts = {
-        logFilePath: 'sharkAttack.log',
-        timestampFormat: 'YYYY-MM-DD HH:mm:ss.SSS'
-    },
-    log = SimpleNodeLogger.createSimpleLogger(opts);
+const SimpleNodeLogger = require('simple-node-logger');
+const opts = {
+    logFilePath: 'sharkAttack.log',
+    timestampFormat: 'YYYY-MM-DD HH:mm:ss.SSS'
+};
+const log = SimpleNodeLogger.createSimpleLogger(opts);
 
-const HOST = process.env.HOST || 'us-cdbr-east-04.cleardb.com';
-const USER = process.env.USER || 'b592502e80f8e1';
-const PASSWORD = process.env.PASSWORD || '8faf8617';
-const DATABASE = process.env.DATABASE || 'heroku_93866080671e8bc';
-
-//mysql://b592502e80f8e1:8faf8617@us-cdbr-east-04.cleardb.com/heroku_93866080671e8bc?reconnect=true
+const HOST = process.env.HOST;
+const USER = process.env.USER;
+const PASSWORD = process.env.PASSWORD;
+const DATABASE = process.env.DATABASE;
 
 const mysql = require('mysql');
 const util = require('util');
