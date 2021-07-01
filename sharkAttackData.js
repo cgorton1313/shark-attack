@@ -5,11 +5,12 @@ const SimpleNodeLogger = require('simple-node-logger'),
     },
     log = SimpleNodeLogger.createSimpleLogger(opts);
 
-const HOST = process.env.HOST || '68.66.216.18';
-const USER = process.env.USER || 'penguinh_sharkattack';
-const PASSWORD = process.env.PASSWORD || 'aph_sharkattack!';
-const DATABASE = process.env.DATABASE || 'penguinh_sharkattack';
-
+const HOST = process.env.HOST || 'us-cdbr-east-04.cleardb.com';
+const USER = process.env.USER || 'b592502e80f8e1';
+const PASSWORD = process.env.PASSWORD || '8faf8617';
+const DATABASE = process.env.DATABASE || 'heroku_93866080671e8bc';
+// mysql://be3dd4363f9e07:3d762b16@us-cdbr-east-04.cleardb.com/heroku_5fcdcc8c0be949d?reconnect=true
+//mysql://b592502e80f8e1:8faf8617@us-cdbr-east-04.cleardb.com/heroku_93866080671e8bc?reconnect=true
 const mysql = require('mysql');
 const util = require('util');
 
@@ -32,8 +33,6 @@ async function getQueryData(sql) {
         password: PASSWORD,
         database: DATABASE
     });
-
-    log.info(HOST, USER, PASSWORD, DATABASE);
 
     connection.connect(function(err) {
         if (err) {
